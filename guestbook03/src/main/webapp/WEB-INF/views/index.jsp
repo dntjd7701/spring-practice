@@ -3,7 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %> 
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
-	
+
+<% pageContext.setAttribute("newline", "\n"); %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,18 +30,18 @@
 	
 	<br>
 	
-	<c:forEach var="vo" items="${list }">
+	<c:forEach var="vo" items="${list }" varStatus="status">
 		<form action="${pageContext.request.contextPath }" method="post">
 			<!-- <input type="number" name="no"> -->
 			<table width=510 border=1>
 				<tr>
-					<td>[${fn:length(list) }]</td>
+					<td>[${status.count }]</td>
 					<td>${vo.name }</td>
-					<td>${vo.regDate }></td>
+					<td>${vo.regDate }</td>
 					<td><a href="${pageContext.request.contextPath }/deleteform?no=${vo.no}">삭제</a></td>
 				</tr>
 				<tr>
-					<td colspan=4><pre>${vo.message }</pre> </td>
+					<td colspan=4>${fn:replace(vo.message,newline,"<br/>") }</td>
 				</tr>
 			</table>
 		</form>
