@@ -9,14 +9,31 @@
 	</parent>
 	<artifactId>hellospring03</artifactId>
 	<packaging>war</packaging>
-
-
+	
+	
+	<!--  설정에서는 변수라고 생각하면 된다. --> 
 	<properties>
 		<org.springframwork-version>4.3.4.RELEASE</org.springframwork-version>
 	</properties>
 
 
 	<dependencies>
+	
+	
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		
 		<!-- Spring Context -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -37,23 +54,29 @@
 			<artifactId>spring-web</artifactId>
 			<version>${org.springframwork-version}</version>
 		</dependency>
-
-
+		
+		
+		
+		<!-- MariaDB JDBC Driver -->
+		<!-- repository, CRUD -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
+		    <groupId>org.mariadb.jdbc</groupId>
+		    <artifactId>mariadb-java-client</artifactId>
+		    <version>2.7.2</version>
 		</dependency>
+		
+			<!-- jstl -->
 		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>2.0</version>
-			<scope>provided</scope>
+    		<groupId>jstl</groupId>
+   			 <artifactId>jstl</artifactId>
+   			 <version>1.2</version>
 		</dependency>
-
-
+		
+		
 	</dependencies>
+
+
+
 
 	<build>
 		<finalName>hellospring03</finalName>
@@ -79,7 +102,7 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
-
+	
+	
+	
 </project>
