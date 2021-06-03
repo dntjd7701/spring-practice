@@ -24,3 +24,8 @@
 			|--EmaillistVo
 
 * jdbc, jstl 라이브러리 추가 	
+
+
+7. views jsp 파일 정리 
+
+8. handler 처리 작업(코딩)
