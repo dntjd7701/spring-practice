@@ -7,8 +7,9 @@
 		<artifactId>spring-practices</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>emaillist03</artifactId>
+	<artifactId>guestbook03</artifactId>
 	<packaging>war</packaging>
+	
 	
 	<!--  설정에서는 변수라고 생각하면 된다. --> 
 	<properties>
@@ -62,7 +63,7 @@
 
 
 	<build>
-		<finalName>emaillist03</finalName>
+		<finalName>guestbook03</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -78,7 +79,7 @@
 				<artifactId>tomcat-maven-plugin</artifactId>
 				<configuration>
 					<url>http://127.0.0.1:9090/manager/text</url>
-					<path>/emaillist03</path>
+					<path>/guestbook03</path>
 					<username>admin</username>
 					<password>manager</password>
 				</configuration>
@@ -87,7 +88,5 @@
 	</build>
 	
 	
-	
-
 	
 </project>
