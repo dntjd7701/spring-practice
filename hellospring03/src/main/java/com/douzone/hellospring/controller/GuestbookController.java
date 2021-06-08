@@ -31,14 +31,14 @@ public class GuestbookController {
 	 * @return
 	 */
 	@ResponseBody
-	@RequestMapping
+	@RequestMapping()
 	public String list() {
 		return "GuestbookController:list";
 	}
 	
 	
 	@ResponseBody
-	@RequestMapping
+	@RequestMapping()
 	public String delete() {
 		return "GuestbookController:delete";
 	}
