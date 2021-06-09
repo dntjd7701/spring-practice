@@ -46,5 +46,6 @@
 		<module>emaillist03</module>
 		<module>guestbook03</module>
 		<module>logex</module>
+		<module>aoptest</module>
 	</modules>
 </project>
