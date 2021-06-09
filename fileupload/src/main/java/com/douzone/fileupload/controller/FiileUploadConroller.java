@@ -16,6 +16,17 @@ public class FiileUploadConroller {
 		return "/WEB-INF/views/form.jsp";
 	}
 	
+	
+	/**
+	 * 
+	 * @param file
+	 * @return
+	 * 
+	 *  파일의, 이름, 날짜, 사이즈, 내용 ..
+	 *  모든 정보가 들어가있다. (file 에)
+	 *  
+	 *  중요한 것은, 후처리 과정이다. 
+	 */
 	@RequestMapping(value="/upload", method=RequestMethod.POST)
 	public String upload(@RequestParam("file1") MultipartFile file) {
 	return "/WEB-INF/views/result.jsp";
