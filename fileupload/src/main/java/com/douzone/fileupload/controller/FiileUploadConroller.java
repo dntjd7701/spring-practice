@@ -1,16 +1,22 @@
 package com.douzone.fileupload.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.douzone.fileupload.service.FileUploadService;
+
 @Controller
 public class FiileUploadConroller {
+	@Autowired
+	private FileUploadService fileUploadService;
+	
 	// Handler 제작
 	// ViewResolver 없으니까. 절대 경로 적을것. 
-	
 	@RequestMapping({"","/form"})
 	public String form() {
 		return "/WEB-INF/views/form.jsp";
@@ -27,10 +33,6 @@ public class FiileUploadConroller {
 	 *  
 	 *  중요한 것은, 후처리 과정이다. 
 	 */
-	@RequestMapping(value="/upload", method=RequestMethod.POST)
-	public String upload(@RequestParam("file1") MultipartFile file) {
-	return "/WEB-INF/views/result.jsp";
-	}
 	/**
 	 * 
 	 *  한번에 여러 파일을 처리하고 싶을 경우 
@@ -46,5 +48,23 @@ public class FiileUploadConroller {
 	 *		return "/WEB-INF/views/result.jsp";
 	 *	}
 	 */
+	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	public String upload(
+			@RequestParam("file1") MultipartFile file1,
+			@RequestParam(value="email", required=true, defaultValue="") String email,
+			Model model) {
+		// check
+		System.out.println("email : " + email);
+		
+		// restore method
+		String url = fileUploadService.restore(file1);
+		// result.jsp 로 url 정보 보내기 
+		model.addAttribute("url", url);
+		
+	return "/WEB-INF/views/result.jsp";
+	
+	
+	}
+	
 	
 }
