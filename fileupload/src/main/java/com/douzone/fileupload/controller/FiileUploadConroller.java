@@ -20,5 +20,20 @@ public class FiileUploadConroller {
 	public String upload(@RequestParam("file1") MultipartFile file) {
 	return "/WEB-INF/views/result.jsp";
 	}
-
+	/**
+	 * 
+	 *  한번에 여러 파일을 처리하고 싶을 경우 
+	 * @param file
+	 * @return
+	 * 
+	 * 단, 조건으로 
+	 * 그 name 이 같아야 한다. 
+	 * 
+	 * 
+	 *	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	 *	public String upload(@RequestParam("file") MultipartFile[] files) {
+	 *		return "/WEB-INF/views/result.jsp";
+	 *	}
+	 */
+	
 }
