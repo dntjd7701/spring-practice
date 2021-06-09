@@ -23,6 +23,9 @@
 	</bean> -->
 	
 	
+	<!-- mvc 사용하려면 이건 해주자 .! 안그럼 오류 나오더라  -->
+	<mvc:annotation-driven/>
+	
  	<!-- Multipart Resolver  -->
 	<!-- 멀티파트 리졸버 -->
 	<bean id="multipartResolver" 
@@ -34,6 +37,10 @@
 		<!-- defaultEncoding -->
 		<property name="defaultEncoding" value="utf-8" />
 	</bean>	
+	
+	<!--mvc resources mapping  -->
+	<!-- mapping 시에 img들의 위치는 location과 mapping이 각각 지정하는곳에 있어야한다.   -->
+	<mvc:resources location="file:/Users/kang-woosung/uploads-mysite/" mapping="/images/**"/>
 	
 
 	<context:annotation-config />

@@ -2,6 +2,7 @@ package com.douzone.fileupload.service;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.Calendar;
 
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Service
 public class FileUploadService {
 	private static final String SAVE_PATH="/Users/kang-woosung/uploads-mysite/";
+	private static final String URL_BASE="/images";
 	/**
 	 * 
 	 * @param file1
@@ -54,8 +56,12 @@ public class FileUploadService {
 		
 		
 			byte[] data = file.getBytes();
-			new FileOutputStream(SAVE_PATH + "/" + saveFileName).write(data);;
+			OutputStream os = new FileOutputStream(SAVE_PATH + "/" + saveFileName);
+			os.write(data);
+			os.close();
 			
+			
+			url = URL_BASE + "/" + saveFileName;
 			
 		} catch (IOException e) {
 			throw new RuntimeException("file upload error" + e);
