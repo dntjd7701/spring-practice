@@ -26,7 +26,10 @@
 		|			|--DVDPlayerConfig.xml
 		|				
 		|
-		|---com.douzone.container.videosystem
+		|---com.douzone.container.config.videosystem.mixing
+		|			|--DVDConfig.java
+		|			|--DVDPlayerConfig.java
+		|			|--VideoSystemConfig.java
 		
 	*src/main/resources
 		|---com.douzone.container.config.user
@@ -37,6 +40,8 @@
 		|			
 		|---com.douzone.container.config.videosystem
 		|			|--DVDPlayerConfig.xml
+		|
+		
 		
 		
 	*src/test/java
@@ -51,6 +56,8 @@
 		|---com.douzone.container.config.videosystem
 		|			|--DVDPlayerJavaConfigTest
 		|			|--DVDPlayerXmlConfigTest
+		|
+
 			
 
 AvengersInfinityWar

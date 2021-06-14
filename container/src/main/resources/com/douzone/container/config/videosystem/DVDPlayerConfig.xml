@@ -119,7 +119,7 @@
 	</bean>
 
 
-	<!-- 11. 빈 설정 - 프로퍼티를 통한 빈 초기화 2 -->
+	<!-- 11. 빈 설정 - 프로퍼티를 통한 빈 초기화 3-->
 	<util:list id="actorList">
 		<value>Robert Downey Jr.</value>
 		<value>Scarlett</value>
@@ -129,5 +129,25 @@
 		p:title="Avengers Extension Pack3" 
 		p:studio="MARVEL"
 		p:actors-ref="actorList" />
+		
+		
+	<!-- 12. 생성자를 통한 빈 주입 1-->
+	<bean id="dvdPlayer1" class="com.douzone.container.videosystem.DVDPlayer" >
+		<constructor-arg ref="ironMan" />
+	</bean>
+	
+	<!-- 13. 생성자를 통한 빈 주입 2 : c-namespace의 argument name을 사용하는 방법(Spring 3.x)  -->
+	<bean id="dvdPlayer2" class="com.douzone.container.videosystem.DVDPlayer" c:dvd-ref="ironMan" />
+	
+	<!-- 14. 생성자를 통한 빈 주입 3 : c-namespace의 argument index를 사용하는 방법(Spring 3.x)  -->
+	<bean id="dvdPlayer3" class="com.douzone.container.videosystem.DVDPlayer" c:_0-ref="ironMan" />
+	
+	<!-- 15. 프로퍼티를 통한 빈 주입 1-->
+	<bean id="dvdPlayer4" class="com.douzone.container.videosystem.DVDPlayer" >
+		<property name="dvd" ref="avengersDirectorEdition" />
+	</bean>
+	
+	<!-- 16. 프로퍼티를 통한 빈 주입 2: p:namespace 사용 -->
+	<bean id="dvdPlayer5" class="com.douzone.container.videosystem.DVDPlayer" p:dvd-ref="avengersDirectorEdition"/>
 
 </beans>
