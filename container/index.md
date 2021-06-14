@@ -18,7 +18,7 @@
 		|
 		|
 		|---com.douzone.container.config.soundsystem
-		|			|--CDPlayerConfig
+		|			|--CDPlayerConfig.java
 		|				
 		|
 		|---com.douzone.container.videosystem
@@ -28,7 +28,7 @@
 		|			|--applicationContext.xml
 		|
 		|---com.douzone.container.config.soundsystem
-		|			|--applicationContext.xml
+		|			|--CDPlayerConfig.xml
 		|			
 		|---com.douzone.container.config.videosystem
 		
