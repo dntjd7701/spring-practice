@@ -47,6 +47,8 @@
 		|			|--CDPlayerXmlConfigTest.java
 		|
 		|---com.douzone.container.config.videosystem
+		|			|--DVDPlayerJavaConfigTest
+		|			|--DVDPlayerXmlConfigTest
 			
 	
 ------------------------------------------------------------------------------------		
