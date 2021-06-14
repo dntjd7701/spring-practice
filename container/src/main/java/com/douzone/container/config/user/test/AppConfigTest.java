@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.douzone.container.config1.user1.AppConfig01;
+import com.douzone.container.config.user.AppConfig01;
 import com.douzone.container.user.User;
 
 public class AppConfigTest {
