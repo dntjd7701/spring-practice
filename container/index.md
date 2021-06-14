@@ -11,6 +11,8 @@
 		|			|--HighSchoolRapper2Final
 		|			|--HighSchoolRapper3Final
 		|
+		|---com.douzone.container.videosystem
+		|
 		|
 		|---com.douzone.container.config.user.test
 		|			|--AppConfigTest.java(JUnit으로 옮기기)
@@ -19,6 +21,8 @@
 		|
 		|---com.douzone.container.config.soundsystem
 		|			|--CDPlayerConfig.java
+		|
+		|---com.douzone.container.config.videosystem
 		|				
 		|
 		|---com.douzone.container.videosystem
@@ -41,6 +45,8 @@
 		|---com.douzone.container.config.soundsystem
 		|			|--CDPlayerJavaConfigTest.java
 		|			|--CDPlayerXmlConfigTest.java
+		|
+		|---com.douzone.container.config.videosystem
 			
 	
 ------------------------------------------------------------------------------------		
