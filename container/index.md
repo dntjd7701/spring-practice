@@ -1,22 +1,35 @@
-```java
+```
 
 	*src/main/java   
 		|---com.douzone.container.user
 		|			|--User.java
 		|			|--Friend.java
+		|
+		|---com.douzone.container.soundsystem
+		|			|--CDPlayer
+		|			|--CompactDisc
+		|			|--HighSchoolRapper2Final
+		|			|--HighSchoolRapper3Final
+		|
+		|
 		|---com.douzone.container.config.user.test
 		|			|--AppConfigTest.java(JUnit으로 옮기기)
 		|			|--XmlConfigTest.java(JUnit으로 옮기기)
-		|---com.douzone.container.config.user
-		|			|--AppConfig.java
+		|
+		|
+		|---com.douzone.container.config.soundsystem
+		|			|--CDPlayerConfig
 		|				
-		|---com.douzone.container.soundsystem
+		|
 		|---com.douzone.container.videosystem
 		
 	*src/main/resources
 		|---com.douzone.container.config.user
 		|			|--applicationContext.xml
+		|
 		|---com.douzone.container.config.soundsystem
+		|			|--applicationContext.xml
+		|			
 		|---com.douzone.container.config.videosystem
 		
 		
@@ -24,6 +37,10 @@
 		|---com.douzone.container.user
 		|			|--AppConfigTest.java
 		|			|--XmlConfigTest.java
+		|
+		|---com.douzone.container.config.soundsystem
+		|			|--CDPlayerJavaConfigTest.java
+		|			|--CDPlayerXmlConfigTest.java
 			
 	
 ------------------------------------------------------------------------------------		
