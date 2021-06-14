@@ -1,4 +1,4 @@
-package com.douzone.container.config.user;
+package com.douzone.container.config1.user1;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

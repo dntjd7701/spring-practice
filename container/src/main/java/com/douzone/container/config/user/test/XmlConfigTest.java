@@ -11,7 +11,6 @@ import com.douzone.container.user.User;
 import com.douzone.container.user.User1;
 
 public class XmlConfigTest {
-
 	public static void main(String[] args) {
 		// XML Auto Configuration(Annotation Scanning)
 		// testBeanFactory01();
@@ -110,5 +109,4 @@ public class XmlConfigTest {
 		System.out.println(user1.getName());
 
 	}
-
 }
