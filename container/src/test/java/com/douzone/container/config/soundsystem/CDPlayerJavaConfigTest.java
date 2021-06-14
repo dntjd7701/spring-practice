@@ -18,7 +18,7 @@ import com.douzone.container.soundsystem.CDPlayer;
 //@ContextConfiguration(locations = {"/com/douzone/container/config/user/applicationContext02.xml"})
 public class CDPlayerJavaConfigTest {
 	@Rule
-	public final SystemOutRule systemOutRul = new SystemOutRule();
+	public final SystemOutRule systemOutRul = new SystemOutRule().enableLog();
 	
 	@Autowired
 	private CDPlayer cdPlayer;
@@ -27,6 +27,7 @@ public class CDPlayerJavaConfigTest {
 	public void testCDPlayerNotNull() {
 		assertNotNull(cdPlayer);
 	}
+	
 	
 	public void testPlay() {
 		cdPlayer.play();

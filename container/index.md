@@ -23,6 +23,7 @@
 		|			|--CDPlayerConfig.java
 		|
 		|---com.douzone.container.config.videosystem
+		|			|--DVDPlayerConfig.xml
 		|				
 		|
 		|---com.douzone.container.videosystem
@@ -35,6 +36,7 @@
 		|			|--CDPlayerConfig.xml
 		|			
 		|---com.douzone.container.config.videosystem
+		|			|--DVDPlayerConfig.xml
 		
 		
 	*src/test/java
@@ -50,7 +52,13 @@
 		|			|--DVDPlayerJavaConfigTest
 		|			|--DVDPlayerXmlConfigTest
 			
-	
+
+AvengersInfinityWar
+AvengersEndGame
+AvengersAgeOfUltron
+
+BlanckDisc
+CaptinAmerica
 ------------------------------------------------------------------------------------		
 		
 directory가 다르지만, 
